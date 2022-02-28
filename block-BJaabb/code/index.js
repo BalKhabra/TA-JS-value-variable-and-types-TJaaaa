@@ -7,17 +7,24 @@
 */
 
 let user = prompt ("Enter username")
-alert
+alert (user);
+let userName = user;
+
+console.log(user, userName);
+let age = 22, isLearning = true;
+
+user = "John";
+console.log (user, "user" ,userName, "userName");
 
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` 
 operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
 
-let numA = Number(prompt ("Enter first number"));
-let numB = Number(prompt ("Enter second number"));
-let sum = 0;
-
+let numA = +prompt ("Enter first number");
+let numB = +prompt ("Enter second number");
+let sum = numA + numB;
+alert(sum);
 // Loops
 
 
@@ -28,19 +35,29 @@ for (let j = 0; j <= 10; j = j + 2){
 } 
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
-for (let i = 9; i <= 1; i = i+1){
+for (let i = 9; i >= 1; i = i++){
     if (i % 2 !== 0)
-    console.log (i)
+    console.log (i);
 }
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-for (let i = 9; i <= 1; i = i+1){
-    if (i % 2 !== 0)
-    console.log (i)
+let finalString = "";
+let initialValue = 0;
+
+while(initialValue <= 0){
+    finalString += initialValue;
+    initialValue--;
 }
+console.log(finalString);
+
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
-for (let i = 9; i <= 1; i = i+1){
-    if (i % 2 !== 0)
-    console.log (i)
+let evenString = "";
+let initialEvenValue = 10;
+
+while(initialEvenValue <= 0){
+if (initialEvenValue % 2 === 0){
+    evenString += initialEvenValue;
+}
+   initialEvenValue--;
 }
 // Comparisoin
 
@@ -59,3 +76,12 @@ Example:
 "hello", -21; // false
 
 */
+
+
+let num1 = prompt("Enter number one")
+let num2 = prompt("Enter number two")
+if (isNaN (num1) || isNaN(num2)){
+    alert("Invalid entry")
+} else {
+    alert(num1 === num2);
+}
