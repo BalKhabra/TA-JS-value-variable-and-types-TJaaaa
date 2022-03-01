@@ -15,4 +15,18 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+while (amount < bank_balance){
+    amount = amount + PHONE_PRICE // $309.96
+    if ( amount < SPENDING_THRESHOLD){ // true
+     amount = amount + ACCESSORY_PRICE // 109.98
+}
+}
+const tax = amount * TAX_RATE;
+const totalCost = tax + amount;
+console.log(`The total cost is $${totalCost.toFixed(2)}`)
+
+
+
+
+
 // ⛑ Answer of the above will `$334.76`.
